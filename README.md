@@ -119,9 +119,11 @@ npm run lint
 
 ## Deployment
 
-The website is intended to be deployed using Vercel, with GitHub integration for source control and automatic deployments.
+The website is deployed using Vercel and connected to GitHub for automatic deployments.
 
-**Live Website:** To be added after deployment.
+**Live Website:** https://personalportfolio-liart-two.vercel.app/
+
+**GitHub Repository:** https://github.com/Infernaliia/PersonalPortfolio
 
 ## Author
 
