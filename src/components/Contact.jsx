@@ -1,15 +1,13 @@
 const contactDetails = {
-  email: "your.email@example.com",
+  email: null,
   github: "https://github.com/Infernaliia",
-  linkedin: "https://www.linkedin.com/in/yourusername",
+  linkedin: null,
 };
 
 export default function Contact() {
   return (
     <section className="section contact-section" id="contact">
-
       <div className="container">
-
         <div className="contact-content">
 
           <p className="section-eyebrow">
@@ -28,9 +26,11 @@ export default function Contact() {
 
           <a
             className="button button-primary contact-button"
-            href={`mailto:${contactDetails.email}`}
+            href={contactDetails.github}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Get in touch <span>↗</span>
+            Connect on GitHub <span>↗</span>
           </a>
 
           <div className="contact-links">
@@ -43,24 +43,26 @@ export default function Contact() {
               GitHub ↗
             </a>
 
-            <a
-              href={contactDetails.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn ↗
-            </a>
+            {contactDetails.email && (
+              <a href={`mailto:${contactDetails.email}`}>
+                Email ↗
+              </a>
+            )}
 
-            <a href={`mailto:${contactDetails.email}`}>
-              Email ↗
-            </a>
+            {contactDetails.linkedin && (
+              <a
+                href={contactDetails.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+            )}
 
           </div>
 
         </div>
-
       </div>
-
     </section>
   );
 }
